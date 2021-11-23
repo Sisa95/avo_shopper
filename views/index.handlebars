@@ -1,1 +1,61 @@
-<h2>Best deals</h2>
+<form action="/" method="GET">
+
+    <div class="container-fluid demo  border border-info">
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" id="fe">
+                <h1 style="text-align: center;"></h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" id="fe">
+                <h4 style="text-align: justify; font-size: 1.2em">Select Shop Below</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+
+                <select name="shopId">
+                    <option value="">Select shop</option>
+                    {{#each avo_shops}}
+                    <option value="">
+                        {{name}}
+                    </option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="col-md-2">
+            </div>
+
+        </div>
+
+</form>
+<div class="row" style="margin-top:30px">
+    <div class="col-md-4">
+        <form action="/add_product" method="GET">
+            <button class="btn btn-1 btn-sep icon-info " class="btn" type="submit">Add</button>
+        </form>
+
+    </div>
+    <div class="col-md-4">
+        <form action="./deals4this_shop" method="GET">
+            <button class="btn btn-1 btn-sep icon-info " class="btn" type="submit">View Deals</button>
+        </form>
+    </div>
+
+    <div class="col-md-4">
+        <form action="add_shop" method="GET">
+            <button class="btn btn-1 btn-sep icon-info " class="btn">Create Shop</button>
+        </form>
+    </div>
+</div>
+
+
+</div>
